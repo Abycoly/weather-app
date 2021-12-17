@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+   config:{
+    feedRoot: "http://api.openweathermap.org/data/2.5/forecast?APPID=a5263365f4320595a5124ae84f672c88&lang=fr&units=metric&q="
+  }
 };
 
 /*
@@ -14,3 +17,4 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+

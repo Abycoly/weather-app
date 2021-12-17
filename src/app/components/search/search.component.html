@@ -1,0 +1,19 @@
+<div class="search-container">
+  <form [formGroup]="weatherSearchForm" class="search-form" (ngSubmit)="sendToAPI(weatherSearchForm.value)">
+
+    <span class="logo" routerLink="/">Weather App</span>
+    <input type="text" class="search-input" id="weatherLocation" name="search" ngModel placeholder="Search"
+      formControlName="location">
+    <button class="search-button">Rechercher</button>
+  </form>
+</div>
+
+<div class="weatherMain" *ngIf="this.weatherData?.city.name">
+  <div class="weatherWidgetRow city_name">{{this.weatherData?.city.name}}</div>
+  <div class="weatherWidgetRow" style="font-size: 32px; margin-top: 5px;">{{this.weatherData?.list[0].main.temp}}°</div>
+  <div class="weatherWidgetRow" style="font-size: 12px">{{this.weatherData?.list[0].main.temp_min}}° /
+    {{this.weatherData?.list[0].main.temp_max}}°</div>
+  <div class="weatherWidgetRow" style="font-size: 12px;"> Ressenti: {{this.weatherData?.list[0].main.feels_like}}°</div>
+  <div class="weatherWidgetRow" style="font-size: 12px;">Humidité: {{this.weatherData?.list[0].main.humidity}}</div>
+  <div class="weatherWidgetRow" style="font-size: 12px;">{{this.weatherData?.list[0].weather[0].description}}</div>
+</div>
