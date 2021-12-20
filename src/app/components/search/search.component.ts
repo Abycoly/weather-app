@@ -12,6 +12,7 @@ export class SearchComponent implements OnInit {
 
   public weatherSearchForm!: FormGroup;
   public weatherData : any;
+  public date = new Date()
 
 
   constructor(private router: Router, private formBuilder: FormBuilder, private httpService: HttpService) {
@@ -21,6 +22,7 @@ export class SearchComponent implements OnInit {
     this.weatherSearchForm = this.formBuilder.group({
       location: ['']
     })
+    this.date
     console.log(this.weatherData);
   }
 

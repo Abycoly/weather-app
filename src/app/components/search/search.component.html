@@ -7,9 +7,16 @@
     <button class="search-button">Rechercher</button>
   </form>
 </div>
+<!-- <ng-container *ngIf="date>this.weatherData?.list[0].dt_txt; else elseTemplate">
+{{date}}
+</ng-container>
+<ng-template #elseTemplate>
+
+</ng-template> -->
 
 <div class="weatherMain" *ngIf="this.weatherData?.city.name">
   <div class="weatherWidgetRow city_name">{{this.weatherData?.city.name}}</div>
+  <div class="weatherWidgetRow" style="font-size: 12px;"><img src="{{'http://openweathermap.org/img/wn/'+ this.weatherData?.list[0].weather[0].icon +'@2x.png'}}"></div>
   <div class="weatherWidgetRow" style="font-size: 32px; margin-top: 5px;">{{this.weatherData?.list[0].main.temp}}°</div>
   <div class="weatherWidgetRow" style="font-size: 12px">{{this.weatherData?.list[0].main.temp_min}}° /
     {{this.weatherData?.list[0].main.temp_max}}°</div>

@@ -5,7 +5,9 @@
 export const environment = {
   production: false,
    config:{
-    feedRoot: "http://api.openweathermap.org/data/2.5/forecast?APPID=a5263365f4320595a5124ae84f672c88&lang=fr&units=metric&q="
+    feedRoot: "http://api.openweathermap.org/data/2.5/forecast?APPID=a5263365f4320595a5124ae84f672c88&cnt=3&lang=fr&units=metric&q="
+        // feedRoot: "http://api.openweathermap.org/data/2.5/forecast?APPID=a5263365f4320595a5124ae84f672c88&lang=fr&units=metric&q="
+
   }
 };
 
